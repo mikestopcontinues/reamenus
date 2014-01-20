@@ -1236,7 +1236,7 @@ SWS/S&M: Auto-save input FX Chain slots for selected tracks
 SWS/S&M: Auto-save media file slots for selected items
 SWS/S&M: Auto-save project template slot
 SWS/S&M: Auto-save track template slots
-SWS/S&M: Auto-save track template slots (with items, envelopes) 
+SWS/S&M: Auto-save track template slots (with items, envelopes)
 SWS/S&M: Bypass FX 01 for selected tracks
 SWS/S&M: Bypass FX 02 for selected tracks
 SWS/S&M: Bypass FX 03 for selected tracks

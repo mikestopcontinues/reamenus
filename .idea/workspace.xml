@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00b44a91-5a66-46c5-b6c0-57d057afcd98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reamenus.iml" afterPath="$PROJECT_DIR$/reamenus.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/work/output/ReaMenus 4.591.ReaperMenuSet" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/work/actions/4.32-2.3.0.4.txt" afterPath="$PROJECT_DIR$/work/actions/4.32-2.3.0.4.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="reamenus.iws" />
@@ -16,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/reamenus$start.coverage" NAME="start Coverage Results" MODIFIED="1390242091046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/reamenus$start.coverage" NAME="start Coverage Results" MODIFIED="1390243184142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -70,26 +70,7 @@
     <favorites_list name="reamenus" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="4.52-2.4.0#1.txt" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/4.52-2.4.0#1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="47" selection-start="2000" selection-end="2000" vertical-scroll-proportion="0.33693695" vertical-offset="595" max-vertical-offset="104856">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="4.591-2.4.0#1.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/4.591-2.4.0#1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="36" selection-start="0" selection-end="314767" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="104686">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -108,6 +89,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/4.52-2.4.0#1.txt" />
+        <option value="$PROJECT_DIR$/work/actions/4.32-2.3.0.4.txt" />
       </list>
     </option>
   </component>
@@ -144,7 +126,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,8 +176,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reamenus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reamenus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -554,15 +554,16 @@
       <created>1378562468314</created>
       <updated>1378562468314</updated>
       <workItem from="1390240946612" duration="1092000" />
-      <workItem from="1390242044531" duration="77000" />
+      <workItem from="1390242044531" duration="151000" />
+      <workItem from="1390242293905" duration="918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1169000" />
+    <option name="totallyTimeSpent" value="2161000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="91" y="1288" width="1605" height="988" extended-state="0" />
+    <frame x="91" y="1288" width="1605" height="988" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -580,8 +581,8 @@
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25594854" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25916398" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -613,30 +614,16 @@
     <option name="showOnlyWarnings" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/4.52-2.4.0#1.txt">
+    <entry file="file://$PROJECT_DIR$/work/actions/4.591-2.4.0.1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="47" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="104567">
+        <state line="20" column="35" selection-start="0" selection-end="314767" vertical-scroll-proportion="0.4047619" vertical-offset="0" max-vertical-offset="104975">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4.591-2.4.0#1.txt">
+    <entry file="file://$PROJECT_DIR$/work/actions/4.32-2.3.0.4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="0" selection-end="314767" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="104686">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4.591-2.4.0#1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="0" selection-end="314767" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="104975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4.52-2.4.0#1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="47" selection-start="2000" selection-end="2000" vertical-scroll-proportion="0.33693695" vertical-offset="595" max-vertical-offset="104856">
+        <state line="26" column="19" selection-start="0" selection-end="290158" vertical-scroll-proportion="0.18214285" vertical-offset="289" max-vertical-offset="99127">
           <folding />
         </state>
       </provider>
