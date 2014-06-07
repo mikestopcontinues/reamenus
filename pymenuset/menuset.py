@@ -31,7 +31,7 @@ class MenuSet(object):
 		if type(input_text) is not None:
 			self.__input_text = input_text
 
-		for menu_src in re.findall('\[([^\]]*)\]\n([\s\S]+?)\n\n', self.__input_text, re.MULTILINE):
+		for menu_src in re.findall('\[([^\]]*)\]\n([^\[]+)', self.__input_text, re.MULTILINE):
 			loc = menu_src[0].lower()
 
 			if 'toolbar' in loc:
