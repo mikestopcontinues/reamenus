@@ -31,7 +31,7 @@ class Submenu(Item):
 		self.items = []
 
 	def style(self):
-		self.name = '&' + self.name.strip('&').strip()
+		self.name = '&' + self.name.replace('&', '').strip()
 
 		for item in self.items:
 			item.style()
@@ -64,7 +64,7 @@ class Label(Item):
 
 class Action(Item):
 	def style(self):
-		self.name = '&' + self.name.strip('&').strip()
+		self.name = '&' + self.name.replace('&', '').strip()
 
 	def flatten(self, count):
 		count, out = super().flatten(count)

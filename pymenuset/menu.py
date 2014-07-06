@@ -3,6 +3,10 @@ from pymenuset.item import *
 
 import re
 
+repeat_exceptions = [
+	'_SWSMARKERLIST1',
+	'_SWSAUTOCOLOR_OPEN',
+]
 
 class Menu(object):
 	def __init__(self, input_text=None):
@@ -19,6 +23,7 @@ class Menu(object):
 			self.__input_text = input_text
 
 		items = []
+		repeats = []
 		icons = {}
 
 		for line in self.__input_text.split("\n"):
@@ -29,7 +34,16 @@ class Menu(object):
 			elif search == 'icon':
 				self.__parse_icon(line, icons)
 			elif search == 'item':
-				self.__parse_item(line, items)
+				self.__parse_item(line, items, repeats)
+
+		# illuminate repeats
+		if self.title != 'MIDI main menu context':
+			for repeat in repeats:
+				print(self.title)
+				print(repeat[0])
+				print(repeat[1])
+				print(repeat[2])
+				print()
 
 		# connect icons with actions
 		for id in icons.keys():
@@ -60,7 +74,7 @@ class Menu(object):
 		match = re.match('icon_([0-9]+)=(.*)', line)
 		icons[match.group(1)] = match.group(2)
 
-	def __parse_item(self, line, items):
+	def __parse_item(self, line, items, repeats):
 		match = re.match('item_([0-9]+)=([^\s]+)(.*)', line)
 
 		id = int(match.group(1))
@@ -88,6 +102,10 @@ class Menu(object):
 		try:
 			items[id] = item_lookup[action](id, name, action)
 		except KeyError:
+			for item in items:
+				if item and item.action == action and action not in repeat_exceptions:
+					repeats.append((action, item.name, name))
+
 			items[id] = Action(id, name, action)
 
 	def style(self):
