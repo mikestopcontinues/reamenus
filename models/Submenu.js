@@ -24,7 +24,8 @@ module.exports = class Submenu extends Item {
     let output = super.flatten(counter);
 
     this.items.forEach((item) => {
-      output += item.flatten(++counter.count);
+      counter.count++;
+      output += item.flatten(counter);
     });
 
     return output + `item_${++counter.count}=-3\n`;

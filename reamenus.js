@@ -12,22 +12,23 @@ const MenuSet = require('./models/MenuSet');
 // build
 
 function build(menuset) {
+
   // main menus
 
-  menuset.menus['Main track'].items = menuset.menus['Track control panel context'].splice();
+  menuset.menus['Main track'].items = menuset.menus['Track control panel context'].items.splice();
   menuset.menus['Main track'].title = '&Track';
 
-  menuset.menus['Main item'].items = menuset.menus['Media item context'].splice();
+  menuset.menus['Main item'].items = menuset.menus['Media item context'].items.splice();
   menuset.menus['Main item'].title = '&Item';
 
-  menuset.menus['Main insert'].items = menuset.menus['Ruler/arrange context'].splice();
+  menuset.menus['Main insert'].items = menuset.menus['Ruler/arrange context'].items.splice();
   menuset.menus['Main insert'].title = 'Time&line';
 
   menuset.menus['Main extensions'].title = '&Memory';
 
   // midi menus
 
-  menuset.menus['MIDI main navigate'].items = menuset.menus['MIDI piano roll context'].slice();
+  menuset.menus['MIDI main navigate'].items = menuset.menus['MIDI piano roll context'].items.slice();
   menuset.menus['MIDI main navigate'].title = '&Notes';
 
   let split = undefined;
@@ -45,17 +46,17 @@ function build(menuset) {
 
     switch (item.name) {
       case 'File':
-        return item.items = menuset.menus['MIDI main file'].slice();
+        return item.items = menuset.menus['MIDI main file'].items.slice();
       case 'Edit':
-        return item.items = menuset.menus['MIDI main edit'].slice();
+        return item.items = menuset.menus['MIDI main edit'].items.slice();
       case 'Notes':
-        return item.items = menuset.menus['MIDI main navigate'].slice();
+        return item.items = menuset.menus['MIDI main navigate'].items.slice();
       case 'Options':
-        return item.items = menuset.menus['MIDI main options'].slice();
+        return item.items = menuset.menus['MIDI main options'].items.slice();
       case 'View':
-        return item.items = menuset.menus['MIDI main view'].slice();
+        return item.items = menuset.menus['MIDI main view'].items.slice();
       case 'Actions':
-        return item.items = menuset.menus['MIDI main actions'].slice();
+        return item.items = menuset.menus['MIDI main actions'].items.slice();
     }
   });
 
@@ -90,6 +91,6 @@ function build(menuset) {
 
 fs.readdir('./input', (err, files) => {
   async.each(files, (menuset) => {
-    build(new MenuSet(menuset, menuset.replace('input', 'output')));
+    build(new MenuSet('./input/' + menuset, './output/' + menuset));
   });
 });

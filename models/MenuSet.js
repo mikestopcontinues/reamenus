@@ -47,17 +47,17 @@ module.exports = class MenuSet {
     this.inputText.split('\n[').map((str, i) => {
       return i > 0 ? '[' + str : str;
     }).forEach((str) => {
-      let match = /\[([^\]]*)\]\n([^\[]+)/gi.exec(str);
+      let [, name, menustr] = /^\[([^\]]+)\]\n([\w\W]*)/i.exec(str);
 
-      if (_.includes(match[1].toLowerCase(), 'toolbar')) {
-        return this.menus[match[1]] = new ToolbarMenu(match[2]);
+      if (_.includes(name.toLowerCase(), 'toolbar')) {
+        return this.menus[name] = new ToolbarMenu(menustr);
       }
 
-      if (_.includes(match[1].toLowerCase(), 'context')) {
-        return this.menus[match[1]] = new ContextMenu(match[2]);
+      if (_.includes(name.toLowerCase(), 'context')) {
+        return this.menus[name] = new ContextMenu(menustr);
       }
 
-      return this.menus[match[1]] = new Menu(match[2]);
+      return this.menus[name] = new Menu(menustr);
     });
 
     return this;
@@ -79,7 +79,7 @@ module.exports = class MenuSet {
     this.outputText = '';
 
     _.forEach(this.menus, (menu, name) => {
-      this.outputText += `[${name}]\n${menu.flatten()}\n}`;
+      this.outputText += `[${name}]\n${menu.flatten()}\n`;
     });
 
     return this.outputText;
@@ -93,7 +93,7 @@ module.exports = class MenuSet {
     this.outputText = this.flatten();
     let file = fs.outputFileSync(this.outputFile, this.outputText, 'utf8');
 
-    if (!file) {
+    if (file) {
       return console.log('Failed to write ' + this.outputFile);
     }
 

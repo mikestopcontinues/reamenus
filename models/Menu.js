@@ -35,15 +35,15 @@ function parseItem(menu, str, items) {
 
   switch(action) {
     case '-1':
-      return new Separator();
+      return items.push(new Separator());
     case '-2':
-      return new Submenu(name);
+      return items.push(new Submenu(name));
     case '-3':
-      return new SubmenuEnd();
+      return items.push(new SubmenuEnd());
     case '-4':
-      return new Label(name);
+      return items.push(new Label(name));
     default:
-      return new Action(name, action);
+      return items.push(new Action(name, action));
   }
 }
 
@@ -90,6 +90,9 @@ module.exports = class Menu {
     _.compact(items).forEach((item) => {
       switch (item.constructor.name) {
         case 'Submenu':
+          if (!_.last(stack)) {
+            console.log(item);
+          }
           _.last(stack).items.push(item);
           stack.push(item);
           break;
@@ -116,13 +119,14 @@ module.exports = class Menu {
   }
 
   flatten() {
-    this.outputText = `title=${this.title}\n}`;
+    this.outputText = this.title ? `title=${this.title}\n` : '';
     let counter = {
       count: 0
     };
 
     this.items.forEach((item) => {
-      this.outputText += item.flatten(counter.count++);
+      this.outputText += item.flatten(counter);
+      counter.count++;
     });
 
     return this.outputText;

@@ -4,7 +4,7 @@
   "description": "ReaMenus is a community menuset for Cockos' digital audio workstation REAPER. This repository serves as an archive of source files for ReaMenus as well as the module pymenuset, written to help automate the process of generating new versions.",
   "main": "reamenus.js",
   "scripts": {
-    "start": "nodejs --harmony reamenus.js"
+    "start": "node --harmony reamenus.js"
   },
   "repository": {
     "type": "git",
