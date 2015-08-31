@@ -44,7 +44,7 @@ function build(menuset) {
       return;
     }
 
-    switch (item.name.replace(/&/g, '')) {
+    switch (item.name.replace(/&/g, '').trim()) {
       case 'File':
         return item.items = menuset.menus['MIDI main file'].items.slice();
       case 'Edit':
@@ -55,6 +55,8 @@ function build(menuset) {
         return item.items = menuset.menus['MIDI main options'].items.slice();
       case 'View':
         return item.items = menuset.menus['MIDI main view'].items.slice();
+      case 'Contents':
+        return item.items = menuset.menus['MIDI main contents'].items.slice();
       case 'Actions':
         return item.items = menuset.menus['MIDI main actions'].items.slice();
     }
