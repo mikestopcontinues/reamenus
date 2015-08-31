@@ -1,0 +1,23 @@
+{
+  "name": "reamenus",
+  "version": "5.0.1",
+  "description": "ReaMenus is a community menuset for Cockos' digital audio workstation REAPER. This repository serves as an archive of source files for ReaMenus as well as the module pymenuset, written to help automate the process of generating new versions.",
+  "main": "reamenus.js",
+  "scripts": {
+    "start": "nodejs --harmony reamenus.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikestopcontinues/reamenus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikestopcontinues/reamenus/issues"
+  },
+  "homepage": "https://github.com/mikestopcontinues/reamenus",
+  "dependencies": {
+    "async": "^1.4.2",
+    "babel": "^5.8.23",
+    "fs-extra": "^0.24.0",
+    "lodash": "^3.10.1"
+  }
+}
