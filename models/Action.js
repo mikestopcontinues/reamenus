@@ -5,8 +5,8 @@ const Item = require('./Item');
 // export
 
 module.exports = class Action extends Item {
-  constructor(name) {
-    super(name, '-2');
+  constructor(name, action) {
+    super(name, action);
     this.items = [];
   }
 

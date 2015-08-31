@@ -15,13 +15,13 @@ function build(menuset) {
 
   // main menus
 
-  menuset.menus['Main track'].items = menuset.menus['Track control panel context'].items.splice();
+  menuset.menus['Main track'].items = menuset.menus['Track control panel context'].items.slice();
   menuset.menus['Main track'].title = '&Track';
 
-  menuset.menus['Main item'].items = menuset.menus['Media item context'].items.splice();
+  menuset.menus['Main item'].items = menuset.menus['Media item context'].items.slice();
   menuset.menus['Main item'].title = '&Item';
 
-  menuset.menus['Main insert'].items = menuset.menus['Ruler/arrange context'].items.splice();
+  menuset.menus['Main insert'].items = menuset.menus['Ruler/arrange context'].items.slice();
   menuset.menus['Main insert'].title = 'Time&line';
 
   menuset.menus['Main extensions'].title = '&Memory';
@@ -33,7 +33,7 @@ function build(menuset) {
 
   let split = undefined;
   menuset.menus['MIDI main navigate'].items.some((item, i) => {
-    if (item.name == 'Velocity list') {
+    if (_.includes(item.name, 'Velocity list')) {
       menuset.menus['MIDI main navigate'].items.splice(i, 1);
       return true;
     }
@@ -44,7 +44,7 @@ function build(menuset) {
       return;
     }
 
-    switch (item.name) {
+    switch (item.name.replace(/&/g, '')) {
       case 'File':
         return item.items = menuset.menus['MIDI main file'].items.slice();
       case 'Edit':
