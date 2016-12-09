@@ -32,6 +32,7 @@ function build(menuset) {
   menuset.menus['MIDI main navigate'].title = '&Notes';
 
   let split = undefined;
+
   menuset.menus['MIDI main navigate'].items.some((item, i) => {
     if (_.includes(item.name, 'Velocity list')) {
       menuset.menus['MIDI main navigate'].items.splice(i, 1);
