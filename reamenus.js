@@ -79,6 +79,10 @@ function build(menuset) {
     });
   });
 
+  // track menus
+
+  menuset.menus['Empty TCP context'].items = menuset.menus['Track control panel context'].items.slice();
+
   // toolbars
 
   menuset.menus = _.omit(menuset.menus, (menu, name) => {
